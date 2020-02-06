@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
+    }
+
+    compileSdkVersion rootProject.ext.compile_sdk_version
+
+    defaultConfig {
+        applicationId "${rootProject.ext.application_id}"
+        minSdkVersion rootProject.ext.mini_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode rootProject.ext.version_code
+        versionName rootProject.ext.version_name
+        testInstrumentationRunner rootProject.ext.test_runner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "mode"
+
+    productFlavors {
+        def DEVELOPMENT_ENDPOINT = "https://randomuser.me/"
+        development {
+            dimension "mode"
+            buildConfigField "String", "ENDPOINT", "\"" + DEVELOPMENT_ENDPOINT + "\""
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.androidx_version}"
+    implementation "androidx.recyclerview:recyclerview:${rootProject.ext.androidx_version}"
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraint_layout_version}"
+    implementation "androidx.cardview:cardview:${rootProject.ext.cardview_version}"
+
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit2_version}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofit2_version}"
+
+    implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttp3_version}"
+
+    implementation "com.google.dagger:dagger:${rootProject.ext.dagger2_vesion}"
+    kapt "com.google.dagger:dagger-compiler:${rootProject.ext.dagger2_vesion}"
+
+    implementation "com.google.dagger:dagger-android:${rootProject.ext.dagger2_vesion}"
+    implementation "com.google.dagger:dagger-android-support:${rootProject.ext.dagger2_vesion}"
+
+    implementation "com.google.code.gson:gson:${rootProject.ext.gson_version}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofit2_version}"
+
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjava2_version}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.ext.rxandroid_version}"
+
+    implementation "com.facebook.shimmer:shimmer:${rootProject.ext.shimmer_version}"
+
+    implementation ("com.github.bumptech.glide:glide:${rootProject.ext.glide_version}") {
+        exclude group: "com.android.support"
+    }
+
+    implementation 'androidx.core:core-ktx:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':data')
+    implementation project(path: ':mvp')
+    implementation project(path: ':domain')
+    implementation project(path: ':common')
+}

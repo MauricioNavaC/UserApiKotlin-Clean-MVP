@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <com.zeus.zcommon.widget.ZoomableRelativeLayout
+            android:id="@+id/zoom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/zcommon_inactiveMenuButton">
+
+            <ImageView
+                android:id="@+id/img_multimedia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <VideoView
+                    android:id="@+id/vv_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivAudioPlaying"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:background="@color/zcommon_inactiveMenuButton"
+                    app:srcCompat="@drawable/zcommon_img_bg_audio"/>
+
+            </FrameLayout>
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdf_viewer"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.github.barteksc.pdfviewer.PDFView>
+
+        </com.zeus.zcommon.widget.ZoomableRelativeLayout>
+<!--
+        <LinearLayout
+            android:id="@+id/fileOpenFooter"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/zcommon_margin_padding_size_medium"
+            android:background="@color/zcommon_inactiveMenuButton"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTakenByLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/picture_taken_by_label" />
+
+                <TextView
+                    android:id="@+id/tvEmployeeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/zcommon_margin_padding_size_medium"
+                    android:paddingEnd="@dimen/zcommon_margin_padding_size_medium"
+                    tools:text="@string/app_name"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/picture_date_taken_label" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/zcommon_margin_padding_size_medium"
+                    android:paddingEnd="@dimen/zcommon_margin_padding_size_medium"
+                    tools:text="@string/app_name"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@color/zcommon_inactiveMenuButton"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:layout_height="56dp">
+
+        <LinearLayout
+            android:id="@+id/fileOpenFooter"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/zcommon_inactiveMenuButton"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="start|center_vertical">
+
+                <TextView
+                    android:id="@+id/tvEmployeeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:ellipsize="end"
+                    android:paddingStart="@dimen/zcommon_margin_padding_size_medium"
+                    android:paddingEnd="@dimen/zcommon_margin_padding_size_medium"
+                    tools:text="@string/app_name"/>
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/zcommon_margin_padding_size_medium"
+                    android:paddingEnd="@dimen/zcommon_margin_padding_size_medium"
+                    android:ellipsize="end"
+                    tools:text="@string/zcommon_no_data_message"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="end"
+            android:tint="@color/zcommon_colorPrimaryText"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/zcommon_ic_close" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,2 @@
+include ':ui', ':data', ':domain', ':mvp', ':common'
+rootProject.name='UserApi'
