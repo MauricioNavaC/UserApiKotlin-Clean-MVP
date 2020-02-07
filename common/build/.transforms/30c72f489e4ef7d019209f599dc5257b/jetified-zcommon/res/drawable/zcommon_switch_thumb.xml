@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/zcommon_colorBlack" />
+        </shape>
+    </item>
+    <item android:bottom="2dp" android:left="1dp"
+        android:right="1dp" android:top="1dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/zcommon_colorPrimaryText" />
+        </shape>
+    </item>
+    <item
+        android:height="30dp"
+        android:width="30dp"
+        android:drawable="@drawable/zcommon_camera">
+
+    </item>
+</layer-list>

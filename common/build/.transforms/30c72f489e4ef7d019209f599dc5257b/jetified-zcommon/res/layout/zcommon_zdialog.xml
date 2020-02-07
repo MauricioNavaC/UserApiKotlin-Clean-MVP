@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/zcommon_margin_padding_size_medium">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/ivDialogIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/zcommon_margin_padding_size_medium"
+            android:padding="@dimen/zcommon_margin_padding_size_mini"
+            android:visibility="gone"
+            app:srcCompat="@drawable/zcommon_ic_droid" />
+
+        <LinearLayout
+            android:id="@+id/containerTexts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/ivDialogIcon"
+            android:gravity="center">
+
+            <TextView
+                style="@style/TextViewDialog.Title"
+                android:id="@+id/tvTitle"
+                android:gravity="center"
+                tools:text="Touch ID for Zeus"/>
+
+            <TextView
+                style="@style/TextViewDialog.Message"
+                android:id="@+id/tvMessage"
+                android:layout_marginTop="@dimen/zcommon_margin_padding_size_medium"
+                android:gravity="start"
+                tools:text="Inicia sesión rápidamente con tu huella digital"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/containerTexts"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/zcommon_margin_padding_size_mini"
+            android:layout_marginTop="@dimen/zcommon_margin_padding_size_medium"
+            android:layout_marginEnd="@dimen/zcommon_margin_padding_size_medium"
+            android:textColor="@color/zcommon_colorPrimaryText"
+            android:visibility="gone"
+            tools:text="TEST"/>
+
+        <TextView
+            android:id="@+id/item_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivDialogIcon"
+            android:layout_marginTop="@dimen/zcommon_margin_padding_size_medium"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/zcommon_colorPrimaryText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerTexts"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true">
+
+            <Button
+                style="@style/ButtonDialog"
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="@string/zcommon_cancel" />
+
+            <Button
+                style="@style/ButtonDialog"
+                android:id="@+id/btnAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="@string/zcommon_accept" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zcommon_txt_button">14.6sp</dimen>
+    <dimen name="zcommon_txt_caps_over_line">10.4sp</dimen>
+    <dimen name="zcommon_txt_large">18.7sp</dimen>
+    <dimen name="zcommon_txt_medium">15.6sp</dimen>
+    <dimen name="zcommon_txt_mini">10.4sp</dimen>
+    <dimen name="zcommon_txt_regular">14.6sp</dimen>
+    <dimen name="zcommon_txt_small">12.5sp</dimen>
+    <dimen name="zcommon_txt_xlarge">21.8sp</dimen>
+    <dimen name="zcommon_txt_xxlarge">25sp</dimen>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/zcommon_i_margin_padding_size_medium">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/zcommon_i_margin_padding_size_medium">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="@dimen/zcommon_i_margin_padding_size_medium">
+
+            <LinearLayout
+                android:id="@+id/containerTexts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/zcommon_i_margin_padding_size_mini"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/ZCBaseTextView.DialogTitle"
+                    android:id="@+id/tvTitle"
+                    android:gravity="start"
+                    tools:text="Touch ID for Zeus"/>
+
+                <TextView
+                    style="@style/ZCBaseTextView.DialogContent"
+                    android:id="@+id/tvMessage"
+                    android:layout_marginTop="@dimen/zcommon_i_margin_padding_size_small"
+                    android:gravity="start"
+                    tools:text="Inicia sesión rápidamente con tu huella digital"/>
+
+                <TextView
+                    style="@style/ZCBaseTextView"
+                    android:id="@+id/tvBottomMessage"
+                    android:layout_marginTop="@dimen/zcommon_i_margin_padding_size_small"
+                    android:gravity="start"
+                    tools:text="Tu compensación es mucho más que sólo dinero en efectivo"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTexts"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_alignParentEnd="true">
+
+                <Button
+                    style="@style/ButtonDialog.i"
+                    android:id="@+id/btnCancel"
+                    android:layout_weight="1"
+                    android:text="@string/zcommon_cancel" />
+
+                <Button
+                    style="@style/ButtonDialog.i"
+                    android:id="@+id/btnAction"
+                    android:layout_weight="1"
+                    android:text="@string/zcommon_accept" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
