@@ -39,4 +39,4 @@ This layer contains all the presentation logic. Here is where the android stuff 
 - Choose not to add the field to the model since this wouldn't be used
 
 # Working Example GIF
-![](UserApiKotlinExample.gif)
+![](https://media.giphy.com/media/fqt956HTU5T2nVlcza/giphy.gif)
