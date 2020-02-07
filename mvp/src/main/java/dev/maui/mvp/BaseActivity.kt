@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import javax.inject.Inject
 
-abstract class BaseActivity<P : BasePresenter<Any>> : AppCompatActivity() {
+abstract class BaseActivity<Presenter : BasePresenter<Any>> : AppCompatActivity() {
 
   @Inject
-  lateinit var presenter: P
+  lateinit var presenter: Presenter
 
   protected abstract fun getLayout(): Int
   protected abstract fun initInjector()

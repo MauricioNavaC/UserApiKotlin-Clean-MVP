@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">UserApi</string>
+    <string name="activity_userapi_username_placeholder">Mauricio Nava</string>
+    <string name="activity_userapi_email">Email:</string>
+    <string name="activity_userapi_cellphone">Cellphone:</string>
+    <string name="activity_userapi_user_location">User Location</string>
 </resources>

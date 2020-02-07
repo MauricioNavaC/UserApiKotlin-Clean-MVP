@@ -78,4 +78,5 @@ dependencies {
     implementation project(path: ':mvp')
     implementation project(path: ':domain')
     implementation project(path: ':common')
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
 }
