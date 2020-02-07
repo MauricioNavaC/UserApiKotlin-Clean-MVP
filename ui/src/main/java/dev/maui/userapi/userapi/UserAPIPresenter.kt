@@ -15,6 +15,10 @@ class UserAPIPresenter @Inject constructor(private val getUserUseCase: GetUserUs
         getUserUseCase.dispose()
     }
 
+    fun refreshUser() {
+        getUserUseCase.execute(ResultsListObserver(this))
+    }
+
     fun showResultList(resultList: List<Result>) {
         getView()?.showUserData(resultList[0])
     }

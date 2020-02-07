@@ -6,6 +6,7 @@ import dagger.Provides
 import dev.maui.data.Endpoint
 import dev.maui.userapi.BuildConfig
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -16,13 +17,16 @@ class IOModule {
   private val endpoint: Endpoint
 
   init {
+    val loggin = HttpLoggingInterceptor()
     val okHttpBuilder = OkHttpClient.Builder()
 
-    if (BuildConfig.BUILD_TYPE == "debug") {
-      okHttpBuilder.addInterceptor { chain ->
-        println(chain.request())
-        chain.proceed(chain.request())
-      }
+    loggin.level = HttpLoggingInterceptor.Level.BODY
+
+    okHttpBuilder.addInterceptor(loggin)
+
+    okHttpBuilder.addInterceptor { chain ->
+      println(chain.request())
+      chain.proceed(chain.request())
     }
 
     val okHttpClient = okHttpBuilder.build()

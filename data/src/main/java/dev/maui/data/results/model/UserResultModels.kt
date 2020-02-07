@@ -4,7 +4,7 @@ data class Result(val cell: String, val email: String, val location: Location, v
 
 data class Coordinates(val latitude: String, val longitude: String)
 
-data class Location(val city: String, val coordinates: Coordinates, val country: String, val postcode: Int,
+data class Location(val city: String, val coordinates: Coordinates, val country: String,
                     val state: String, val street: Street)
 
 data class Name(val first: String, val last: String, val title: String)
