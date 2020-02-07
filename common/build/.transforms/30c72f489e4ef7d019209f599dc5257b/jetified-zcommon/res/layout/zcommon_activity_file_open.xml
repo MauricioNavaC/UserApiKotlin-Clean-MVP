@@ -5,9 +5,11 @@
     android:id="@+id/root_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@android:color/black">
 
     <LinearLayout
+        android:id="@+id/main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -67,9 +69,10 @@
     </LinearLayout>
 
     <FrameLayout
+        android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#1fffffff"
+        android:layout_height="?android:actionBarSize"
+        android:background="#80000000"
         android:orientation="horizontal">
 
         <ImageView
@@ -80,7 +83,7 @@
             android:clickable="true"
             android:focusable="true"
             android:background="?attr/selectableItemBackgroundBorderless"
-            app:srcCompat="@drawable/zcommon_ic_back" />
+            app:srcCompat="@drawable/zcommon_ic_white" />
 
         <TextView
             android:id="@+id/tv_title_bar"

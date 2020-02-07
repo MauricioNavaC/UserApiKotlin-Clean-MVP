@@ -18,7 +18,7 @@
         />
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"
-        android:id="@+id/progressPercent"
+        android:id="@+id/progressBarLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/zcommon_margin_padding_size_medium"

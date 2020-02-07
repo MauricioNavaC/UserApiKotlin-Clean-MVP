@@ -5,6 +5,10 @@ import io.reactivex.Single
 import retrofit2.http.GET
 
 interface Endpoint {
-  @GET("api/")
+  companion object {
+    const val apiUserEndpoint = "api/"
+  }
+
+  @GET(apiUserEndpoint)
   fun getRandomUser(): Single<User>
 }

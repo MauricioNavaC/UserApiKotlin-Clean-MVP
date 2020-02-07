@@ -80,7 +80,7 @@
             <Button
                 style="@style/ButtonDialog"
                 android:id="@+id/btnCancel"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:text="@string/zcommon_cancel" />
@@ -88,7 +88,7 @@
             <Button
                 style="@style/ButtonDialog"
                 android:id="@+id/btnAction"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:text="@string/zcommon_accept" />

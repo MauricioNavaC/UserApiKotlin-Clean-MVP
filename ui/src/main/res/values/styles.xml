@@ -1,11 +1,40 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- TextViews -->
+    <style name="BaseTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BaseTextView.PrimaryTextView">
+        <item name="android:textSize">@dimen/zcommon_txt_regular</item>
+        <item name="android:textColor">@color/zcommon_black</item>
+    </style>
+
+    <style name="BaseTextView.PrimaryTextViewTitle">
+        <item name="android:textSize">@dimen/zcommon_txt_xlarge</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/zcommon_white</item>
+    </style>
+
+    <style name="BaseTextView.PrimaryTextViewSubTitle">
+        <item name="android:textSize">@dimen/zcommon_txt_large</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/zcommon_color_blue</item>
+    </style>
+
+    <style name="BaseTextView.PrimaryTextViewLegend">
+        <item name="android:textSize">@dimen/zcommon_txt_regular</item>
+        <item name="android:textColor">@color/colorLightGray</item>
     </style>
 
 </resources>

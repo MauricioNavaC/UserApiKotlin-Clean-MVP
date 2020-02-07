@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="Zcommon_ColorPrimaryDark">#E1ECF7</color>
     <color name="zcommon_activeMenuButton">#758AA4</color>
+    <color name="zcommon_activeSwCamera">#F0B40B51</color>
     <color name="zcommon_backgroundAcceptPopup">#50AC52</color>
     <color name="zcommon_backgroundBurgerMenu">#E3F2ED</color>
     <color name="zcommon_backgroundCircleMenuBlue">#0E7886</color>
@@ -19,6 +21,10 @@
     <color name="zcommon_colorOrange">#FD4700</color>
     <color name="zcommon_colorPrimaryText">#6C6C6C</color>
     <color name="zcommon_colorSecondaryText">#B5B5B5</color>
+    <color name="zcommon_color_blue">#2464AA</color>
+    <color name="zcommon_color_white">#ffffff</color>
+    <color name="zcommon_color_white_bright">#e5e5e5</color>
+    <color name="zcommon_color_white_temp">#d0d0d0</color>
     <color name="zcommon_dialog_description">#505050</color>
     <color name="zcommon_dialog_status">#fb744a</color>
     <color name="zcommon_dialog_subtitle">#7b7b7b</color>
@@ -696,8 +702,17 @@
     <dimen name="zcommon_biometric_bottom_sheet_padding">16dp</dimen>
     <dimen name="zcommon_biometric_fingerprint_image_size">60dp</dimen>
     <dimen name="zcommon_biometric_logo_size">48dp</dimen>
+    <dimen name="zcommon_default_icon_size">@dimen/zc_32sdp</dimen>
     <dimen name="zcommon_font_subtitle">13sp</dimen>
     <dimen name="zcommon_font_title">18sp</dimen>
+    <dimen name="zcommon_i_margin_dialog">@dimen/zc_24sdp</dimen>
+    <dimen name="zcommon_i_margin_padding_size_large">@dimen/zc_24sdp</dimen>
+    <dimen name="zcommon_i_margin_padding_size_medium">@dimen/zc_16sdp</dimen>
+    <dimen name="zcommon_i_margin_padding_size_mini">@dimen/zc_4sdp</dimen>
+    <dimen name="zcommon_i_margin_padding_size_no">0dp</dimen>
+    <dimen name="zcommon_i_margin_padding_size_small">@dimen/zc_8sdp</dimen>
+    <dimen name="zcommon_i_margin_padding_size_xlarge">@dimen/zc_32sdp</dimen>
+    <dimen name="zcommon_i_margin_padding_size_xxlarge">@dimen/zc_40sdp</dimen>
     <dimen name="zcommon_margin">10dp</dimen>
     <dimen name="zcommon_margin_dialog">24dp</dimen>
     <dimen name="zcommon_margin_large">15dp</dimen>
@@ -715,21 +730,40 @@
     <dimen name="zcommon_margin_xxlarge">22dp</dimen>
     <dimen name="zcommon_margin_xxsmall">3dp</dimen>
     <dimen name="zcommon_padding_large">14dp</dimen>
+    <dimen name="zcommon_txt_button">14sp</dimen>
+    <dimen name="zcommon_txt_caps_over_line">10sp</dimen>
+    <dimen name="zcommon_txt_large">18sp</dimen>
+    <dimen name="zcommon_txt_medium">15sp</dimen>
+    <dimen name="zcommon_txt_mini">10sp</dimen>
+    <dimen name="zcommon_txt_regular">14sp</dimen>
+    <dimen name="zcommon_txt_small">12sp</dimen>
+    <dimen name="zcommon_txt_xlarge">21sp</dimen>
+    <dimen name="zcommon_txt_xxlarge">24sp</dimen>
     <dimen name="zcommon_zdialog_message">12sp</dimen>
     <dimen name="zcommon_zdialog_title">18sp</dimen>
     <string name="action_settings">Settings</string>
     <string name="app_name">ZCommon</string>
     <string name="error_type_file_not_open">Este tipo de archivo no se puede abrir</string>
+    <string name="label_qr_window">Ubica el código QR en el recuadro</string>
+    <string name="lector_qr">Lector qr</string>
     <string name="picture_date_taken_label">Fecha:</string>
     <string name="picture_taken_by_label">Tomada por:</string>
+    <string name="zcommom_permission_cancel">Cancelar</string>
+    <string name="zcommom_permission_ok">Aceptar</string>
+    <string name="zcommom_permission_permissions_required">Permisos Requeridos</string>
+    <string name="zcommom_permission_permissions_required_legend">¡Los permisos requeridos se han configurado para no volver a preguntar! Por favor proporcionarlos desde la configuración.</string>
+    <string name="zcommom_permission_settings">Configuración</string>
     <string name="zcommon_accept">Aceptar</string>
     <string name="zcommon_biometric_failed">Huella digital no reconocida</string>
     <string name="zcommon_cancel">Cancelar</string>
     <string name="zcommon_continuar_action">Reintentar</string>
+    <string name="zcommon_continue_movil">Continuar</string>
     <string name="zcommon_custom_message">Mensaje personalizado</string>
     <string name="zcommon_dialog_warning_title">Advertencia</string>
     <string name="zcommon_general_error_message">Algo salió mal inténtalo nuevamente</string>
     <string name="zcommon_general_error_title">¡Lo sentimos!</string>
+    <string name="zcommon_generic_require_wifi">Se requiere descargar información adicional, ésto consumirá tus datos móviles</string>
+    <string name="zcommon_label_warning">Advertencia</string>
     <string name="zcommon_no_connection_message">No pudimos conectar a Internet.</string>
     <string name="zcommon_no_connection_title">¡Sin conexión a Internet!</string>
     <string name="zcommon_no_data_message">No se han encontrado resultados.</string>
@@ -737,8 +771,24 @@
     <string name="zcommon_no_data_retrieved_message">No hay datos que mostrar</string>
     <string name="zcommon_no_data_title">¡Sin resultados!</string>
     <string name="zcommon_not_open">No se puede abrir el archivo</string>
+    <string name="zcommon_process_download_error">Error al descargar multimedia</string>
+    <string name="zcommon_qr_message">Escanea el código QR que le apareció a la persona con la que realizaste la conversación.</string>
+    <string name="zcommon_qr_title">Escanea el código QR</string>
     <string name="zcommon_retry_label">Reintentar</string>
+    <string name="zcommon_terms_require_internet_label_download">Recuerda que necesitas conexión a internet para descargar archivos</string>
     <string name="zcommon_visualizer">Visualizador</string>
+    <string name="zcommon_wait_wifi">Esperar Wifi</string>
+    <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/ActionBarTitleTextStyle</item>
+        <item name="background">@color/zcommon_white</item>
+    </style>
+    <style name="ActionBarTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/zcommon_black</item>
+        <item name="android:textSize">@dimen/zc_15sdp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
     <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
         <item name="android:windowIsFloating">true</item>
         <item name="bottomSheetStyle">@style/BottomSheet</item>
@@ -756,8 +806,22 @@
     <style name="ButtonDialog.Wait">
         <item name="android:textColor">@android:color/white</item>
     </style>
+    <style name="ButtonDialog.i">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/zcommon_i_margin_padding_size_mini</item>
+        <item name="android:textSize">@dimen/zcommon_txt_button</item>
+    </style>
     <style name="FingerprintDialog">
         <item name="android:background">@drawable/zcommon_shape_bg_bottom_sheet</item>
+    </style>
+    <style name="Permissions.TransparentTheme" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
     </style>
     <style name="TextViewDialog">
         <item name="android:layout_width">match_parent</item>
@@ -780,19 +844,47 @@
     <style name="TextViewDialog.Title.Wait">
         <item name="android:textColor">@android:color/white</item>
     </style>
+    <style name="ZCBaseTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/zcommon_txt_regular</item>
+    </style>
+    <style name="ZCBaseTextView.DialogContent">
+        <item name="android:textSize">@dimen/zcommon_txt_small</item>
+    </style>
+    <style name="ZCBaseTextView.DialogTitle">
+        <item name="android:textSize">@dimen/zcommon_txt_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ZCommonAnimationDialog.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/zcommon_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/zcommon_anim_out</item>
+    </style>
     <style name="ZCommonAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
     </style>
     <style name="ZCommonAppTheme.Fullscreen" parent="ZCommonAppTheme">
-        <item name="windowNoTitle">true</item>
+
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="ZCommonAppTheme.escanQr" parent="Theme.AppCompat.Light.DarkActionBar">
+
+
+        <item name="colorPrimaryDark">@color/Zcommon_ColorPrimaryDark</item>
+        <item name="android:drawableLeft">@drawable/zcommon_ic_back</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="colorAccent">@color/zcommon_black</item>
+        <item name="android:label">@string/label_qr_window</item>
     </style>
     <style name="ZCommonCustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>
-        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowContentOverlay">@null</item>C
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
         <item name="android:windowBackground">@color/zcommon_transparente</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
@@ -804,5 +896,32 @@
         <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+    <style name="ZCommonDialogWaitTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <!--title and message color-->
+        <item name="android:windowBackground">@color/zcommon_transparente</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowIsFloating">true</item>
+
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--dialog background-->
+        <item name="android:windowAnimationStyle">@style/ZCommonAnimationDialog.Window</item>
+
+    </style>
+    <style name="ZCommonFullScreen" parent="Theme.AppCompat.Light.NoActionBar"/>
+    <style name="ZCommonTheme.AppCompat.Light.NoActionBar.FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+    <style name="zcommonSwitch" parent="Theme.AppCompat.Light">
+
+        <item name="thumbTint">@color/zcommon_switch_color</item>
+        <item name="trackTint">@color/zcommon_switch_color</item>
     </style>
 </resources>

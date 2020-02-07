@@ -44,6 +44,7 @@ allprojects {
         powermock_version = "1.7.1"
         test_runner_version = '1.1.0-alpha4'
         espresso_version = '3.1.0-alpha4'
+        loggin_version = "4.2.1"
     }
 }
 

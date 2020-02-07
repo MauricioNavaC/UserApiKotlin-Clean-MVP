@@ -9,6 +9,10 @@ android {
         sourceCompatibility = "8"
     }
 
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
     compileSdkVersion rootProject.ext.compile_sdk_version
 
     defaultConfig {
@@ -51,8 +55,10 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofit2_version}"
 
     implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttp3_version}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.loggin_version}"
 
     implementation "com.google.dagger:dagger:${rootProject.ext.dagger2_vesion}"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     kapt "com.google.dagger:dagger-compiler:${rootProject.ext.dagger2_vesion}"
 
     implementation "com.google.dagger:dagger-android:${rootProject.ext.dagger2_vesion}"
@@ -66,7 +72,7 @@ dependencies {
 
     implementation "com.facebook.shimmer:shimmer:${rootProject.ext.shimmer_version}"
 
-    implementation ("com.github.bumptech.glide:glide:${rootProject.ext.glide_version}") {
+    implementation("com.github.bumptech.glide:glide:${rootProject.ext.glide_version}") {
         exclude group: "com.android.support"
     }
 
@@ -78,4 +84,5 @@ dependencies {
     implementation project(path: ':mvp')
     implementation project(path: ':domain')
     implementation project(path: ':common')
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
 }
